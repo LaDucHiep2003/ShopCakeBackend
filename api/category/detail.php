@@ -17,7 +17,8 @@
         'position' => $Category->position,
         'parentId' => $Category->parentId,
         'status' => $Category->status,
-        'description' => $Category->description
+        'description' => $Category->description,
+        'thumbnail' => $Category->thumbnail
     );
 
     echo json_encode($item);

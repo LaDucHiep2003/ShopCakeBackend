@@ -30,6 +30,7 @@
                 'title' => $row['title'],
                 'price' => $row['price'],
                 'image' => $row['image'],
+                'thumbnail' => $row['thumbnail'],
                 'quantity' => $row['quantity'],
                 'totalPrice' => $row['price'] * $row['quantity'],
             );

@@ -24,6 +24,7 @@
                 'title' => $title,
                 'position' => $position,
                 'status' => $status,
+                'thumbnail' => $thumbnail,
             );
             array_push($product_array, $product_item);
         }

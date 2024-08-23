@@ -63,7 +63,7 @@
         }
 
         public function detail(){
-            $sql = "SELECT products.id, products.title, products.price, products.image, cart_items.quantity FROM products
+            $sql = "SELECT products.id, products.title, products.price, products.image,products.thumbnail, cart_items.quantity FROM products
                     INNER JOIN cart_items on products.id = cart_items.product_id
                     INNER JOIN carts on cart_items.cart_id = carts.id
                     WHERE carts.id=:cart_id";

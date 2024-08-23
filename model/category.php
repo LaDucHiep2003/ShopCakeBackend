@@ -11,6 +11,7 @@
         public $parentId;
         public $sort;
         public $value;
+        public $thumbnail;
 
         public function __construct($db){
             $this->conn = $db;
@@ -91,6 +92,7 @@
             $this->description = $row['description'];
             $this->position = $row['position'];
             $this->status = $row['status'];
+            $this->thumbnail = $row['thumbnail'];
         }
 
         public function edit(){

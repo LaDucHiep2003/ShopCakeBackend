@@ -17,6 +17,8 @@
         public $parentId;
         public $cartId;
         public $product_id;
+        public $category_id;
+        public $thumbnail;
 
         public function __construct($db){
             $this->conn = $db;
@@ -198,6 +200,22 @@
             }
             print($stmt->errorInfo());
             return false;
+        }
+
+        public function listProductCategory(){
+            
+            $sql = "SELECT products.id, products.title, products.price, products.oldPrice, products.thumbnail FROM products 
+                INNER JOIN category on products.parentId = category.id
+                WHERE category.id =:category_id";
+
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':category_id', $this->category_id);
+
+            $stmt->execute();
+
+            return $stmt;
+            
+
         }
 
 
